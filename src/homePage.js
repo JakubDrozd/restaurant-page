@@ -91,4 +91,7 @@ export function homePage() {
   const mainBlocksLocation = document.createElement("div");
   mainBlocksLocation.classList.add("main-blocks", "location");
   main.appendChild(mainBlocksLocation);
+
+  const h4InLocation = document.createElement("h4");
+  h4InLocation.innerHTML = `Location`;
 }
