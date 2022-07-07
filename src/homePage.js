@@ -18,15 +18,25 @@ export function homePage() {
   title.innerHTML = "Homeistic";
   header.appendChild(title);
 
-  const list = document.createElement("ul");
-  const nav1 = document.createElement("li");
-  const nav2 = document.createElement("li");
-  const nav3 = document.createElement("li");
-  nav1.classList.add("homeLink");
-  nav2.classList.add("menuLink");
-  nav3.classList.add("contactLink");
+  const ul = document.createElement("ul");
 
-  header.appendChild(list);
+  const homeLink = document.createElement("li");
+  homeLink.classList.add("homeLink");
+  homeLink.innerHTML = `Home`;
+
+  const menuLink = document.createElement("li");
+  menuLink.classList.add("menuLink");
+  menuLink.innerHTML = `Menu`;
+
+  const contactLink = document.createElement("li");
+  contactLink.classList.add("contactLink");
+  contactLink.innerHTML = `Contact`;
+
+  header.appendChild(ul);
+
+  ul.appendChild(homeLink);
+  ul.appendChild(menuLink);
+  ul.appendChild(contactLink);
 
   const main = document.createElement("div");
   main.classList.add("main");
@@ -103,9 +113,8 @@ export function homePage() {
   paraInLocations.innerHTML = `Plac Trzech Krzyży 10/14, 00-507 Warszawa`;
   mainBlocksLocation.appendChild(paraInLocations);
 
-  const mapDiv = document.createElement("div");
-  mapDiv.classList.add("map");
-  mainBlocksLocation.appendChild(mapDiv);
-
-  mainBlocksLocation.appendChild(mapDiv);
+  const map = document.createElement("div");
+  map.classList.add("map");
+  mainBlocksLocation.appendChild(map);
+  map.innerHTML = `<iframe src="http://maps.google.com/maps?q=52.22947689398023,21.02294815614303&z=16&output=embed" height="450" width="600"></iframe>`;
 }
