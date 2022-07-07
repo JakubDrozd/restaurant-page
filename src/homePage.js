@@ -94,4 +94,16 @@ export function homePage() {
 
   const h4InLocation = document.createElement("h4");
   h4InLocation.innerHTML = `Location`;
+
+  mainBlocksLocation.appendChild(h4InLocation);
+
+  const paraInLocations = document.createElement("p");
+  paraInLocations.innerHTML = `Plac Trzech Krzyży 10/14, 00-507 Warszawa`;
+  mainBlocksLocation.appendChild(paraInLocations);
+
+  const mapDiv = document.createElement("div");
+  mapDiv.classList.add("map");
+  mainBlocksLocation.appendChild(mapDiv);
+
+  mainBlocksLocation.appendChild(mapDiv);
 }
