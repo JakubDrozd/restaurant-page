@@ -14,6 +14,8 @@ export function homePage() {
   content.appendChild(header);
 
   const title = document.createElement("div");
+  title.classList.add("title");
+  title.innerHTML = "Homeistic";
   header.appendChild(title);
 
   const list = document.createElement("ul");
