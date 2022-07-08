@@ -2,8 +2,11 @@ import { menuPage } from "./menuPage";
 import { contactPage } from "./contactPage";
 
 export function homePage() {
-  let content = document.getElementById("content");
-  content.innerHTML = "";
+  document.body.innerHTML = "";
+
+  let content = document.createElement("div");
+  content.classList.add("content");
+  document.body.appendChild(content);
 
   let header = document.createElement("div");
   header.classList.add("header");

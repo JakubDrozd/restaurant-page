@@ -2,7 +2,11 @@ import { homePage } from "./homePage";
 import { menuPage } from "./menuPage";
 
 export function contactPage() {
-  content.innerHTML = "";
+  document.body.innerHTML = "";
+
+  let content = document.createElement("div");
+  content.classList.add("content");
+  document.body.appendChild(content);
 
   let header = document.createElement("div");
   header.classList.add("header");

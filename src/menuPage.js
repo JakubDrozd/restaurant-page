@@ -1,9 +1,9 @@
-import photo1 from "./1.jpg";
-import photo2 from "./2.jpg";
-import photo3 from "./3.jpg";
-import photo4 from "./4.jpg";
-import photo5 from "./5.jpg";
-import photo6 from "./6.jpg";
+import photo1 from "./assets/img/1.jpg";
+import photo2 from "./assets/img/2.jpg";
+import photo3 from "./assets/img/3.jpg";
+import photo4 from "./assets/img/4.jpg";
+import photo5 from "./assets/img/5.jpg";
+import photo6 from "./assets/img/6.jpg";
 import { homePage } from "./homePage";
 import { contactPage } from "./contactPage";
 
@@ -26,7 +26,12 @@ export function menuPage() {
   let ph6 = new Image();
   ph6.src = photo6;
 
-  content.innerHTML = "";
+  document.body.innerHTML = "";
+
+  let content = document.createElement("div");
+  content.classList.add("content");
+  document.body.appendChild(content);
+
   let header = document.createElement("div");
   header.classList.add("header");
 
